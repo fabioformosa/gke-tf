@@ -1,6 +1,14 @@
 variable "project_id" {
   default = ""
 }
+
+variable "bucket_name" {
+  default = "it-fabioformosa.quartz-manager-test"
+}
+variable "bucket_prefix" {
+  default = "terraform/state"
+}
+
 variable "region" {
   default = "europe-west8"
 }
@@ -34,4 +42,16 @@ variable "ip_range_pods_name" {
 variable "ip_range_services_name" {
   description = "The secondary ip range to use for services"
   default     = "ip-range-svc"
+}
+
+variable "default_node_pool_machine_type" {
+  default = "e2-micro"
+}
+
+variable "cluster_service_account" {
+  type = string
+}
+
+variable "master_ipv4_cidr_block" {
+  default = "172.16.0.0/28"
 }
