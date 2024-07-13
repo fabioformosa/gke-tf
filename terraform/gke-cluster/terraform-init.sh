@@ -35,7 +35,6 @@ terraform init \
 
 # Documentation
 cat << EOF
-cat << EOF
 Usage:
   $0 <PROJECT_ID> <BUCKET_NAME> <REGION>
 
