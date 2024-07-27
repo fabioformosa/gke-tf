@@ -17,3 +17,10 @@ Launch ./terraform-init.sh to create a GCS bucket to use as backend for a terraf
 
 The script requires to specify as argument the name of bucket used to store the terraform remote state.
 Make sure this bucket name matches with that one specified in the `terraform.tfvars` file
+
+```
+terraform plan
+terraform apply
+```
+
+Finally `gcloud container clusters get-credentials CLUSTER_NAME --location=LOCATION`

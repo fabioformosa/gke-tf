@@ -48,6 +48,10 @@ variable "default_node_pool_machine_type" {
   default = "e2-micro"
 }
 
+variable "default_node_pool_node_count" {
+  default = 1
+}
+
 variable "cluster_service_account" {
   type = string
 }

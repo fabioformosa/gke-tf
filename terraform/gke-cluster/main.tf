@@ -67,6 +67,7 @@ module "gke" {
   ip_range_pods           = var.ip_range_pods_name
   ip_range_services       = var.ip_range_services_name
   create_service_account  = true
+  grant_registry_access   = true
   enable_private_endpoint = false
   enable_private_nodes    = true
   master_ipv4_cidr_block  = var.master_ipv4_cidr_block
@@ -79,9 +80,10 @@ module "gke" {
     {
       name                        = "default-node-pool"
       machine_type                = var.default_node_pool_machine_type
-      node_locations              = "europe-west8-a,europe-west8-b"
-      min_count                   = 1
+      node_locations              = "europe-west8-a"
+      min_count                   = 2
       max_count                   = 3
+      node_count                  = var.default_node_pool_node_count
       local_ssd_count             = 0
       spot                        = false
       disk_size_gb                = 12
